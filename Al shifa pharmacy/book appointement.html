@@ -1,40 +1,457 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  </head>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Al-Shifa Pharmacy &amp; Child Care Clinic</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="pharmacy.css">
   <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    *{
-        margin: 0%;
-        padding: 0%;
-        box-sizing: border-box;
-    }
-</style>
+:root {
+  --navy: #012559;
+  --green: #006A42;
+  --light: #f4f7fb;
+}
 
-<div class="container-fluid" style="width: 100%; background-color: #012559; padding: 10px; display: flex;align-items: center;
-justify-content:space-between; color: white;">
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #1a1a1a;
+  background: #fff;
+}
+
+.top-bar {
+  background: var(--navy);
+  color: #fff;
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker {
+  display: inline-block;
+  animation: scroll 22s linear infinite;
+}
+
+.ticker span {
+  display: inline-block;
+  padding: 0 48px;
+  font-size: 0.95rem;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.logo-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--green);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.brand-name {
+  color: var(--green);
+  font-size: 1.25rem;
+}
+
+.brand-sub {
+  color: var(--navy);
+  font-size: 0.78rem;
+}
+
+.navbar .nav-link {
+  color: var(--green) !important;
+  font-weight: 600;
+}
+
+.navbar .nav-link.active {
+  color: var(--navy) !important;
+}
+
+.hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(160deg, rgba(1, 37, 89, 0.55), rgba(0, 106, 66, 0.35)),
+    radial-gradient(circle at 20% 20%, #7eb8ff 0%, transparent 40%),
+    linear-gradient(180deg, #dceeff, #b7d3c4);
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(2px);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 40px 20px;
+}
+
+.hero-kicker {
+  color: var(--navy);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.hero h1 {
+  color: var(--navy);
+  font-size: clamp(2.4rem, 8vw, 5.5rem);
+  line-height: 0.95;
+  font-weight: 800;
+  margin: 10px 0 16px;
+}
+
+.hero-sub {
+  color: #123;
+  font-size: 1.1rem;
+  margin-bottom: 22px;
+}
+
+.btn-book {
+  background: var(--green);
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.btn-book:hover {
+  background: #005234;
+  color: #fff;
+}
+
+.section-title {
+  color: var(--navy);
+  font-weight: 800;
+}
+
+.service-card,
+.about-panel,
+.appt-form {
+  background: #fff;
+  border: 1px solid #e6eef5;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(1, 37, 89, 0.06);
+  height: 100%;
+}
+
+.service-card h3 {
+  color: var(--green);
+  margin-bottom: 10px;
+}
+
+.about-panel ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.about-panel li {
+  margin: 10px 0;
+}
+
+.site-footer {
+  background: var(--navy);
+  color: #fff;
+  padding: 40px 0;
+}
+
+.site-footer h3,
+.site-footer h4 {
+  color: #fff;
+}
+
+.site-footer p {
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
+  </style>
+</head>
+<body>
+
+  <div class="top-bar">
+    <div class="ticker">
+      <span>Book Your Appointment Today</span>
+      <span>Quality Healthcare • Experienced Doctors • Patient Care</span>
+      <span>Book Appointment | Contact Us</span>
+      <span>Book Your Appointment Today</span>
+      <span>Quality Healthcare • Experienced Doctors • Patient Care</span>
+      <span>Book Appointment | Contact Us</span>
+    </div>
+  </div>
+ 
+
+    <nav class="navbar bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+   <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+    
+    <img src="logo.png"  style="object-fit: cover;"
+         alt="Al-Shifa Logo"
+         width="60"
+         height="50"
+         
+         class="rounded-circle">
+
+    <span>
+        <strong style="color:#006A42;">Al-Shifa</strong>
+        <small class="d-block" style="color:#012559;">
+            Pharmacy & Child Care Clinic
+        </small>
+    </span>
+
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5  style="color: #012559;"offcanvas-title" id="offcanvasNavbarLabel"><a class="navbar-brand d-flex align-items-center gap-2" href="#">
+    
+    <img src="logo.png"  style="object-fit: cover;"
+         alt="Al-Shifa Logo"
+         width="60"
+         height="50"
+         
+         class="rounded-circle">
+
+    <span>
+        <strong style="color:#006A42;">Al-Shifa</strong>
+        <small class="d-block" style="color:#012559;">
+            Pharmacy & Child Care Clinic
+        </small>
+    </span>
+
+</a></h5>
+        <button style="color: #012559;" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" style="color: #012559;">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+           <li class="nav-item">
+            <a class="nav-link" href="PHARMACY.html">Pharmacy</a>
+          </li>
+            <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        <li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle"
+     href="#"
+     role="button"
+     data-bs-toggle="dropdown"
+     aria-expanded="false">
+    Categories
+  </a>
+
+  <ul class="dropdown-menu">
+
+    <li>
+      <a class="dropdown-item" href="prescription.html">
+        Prescription Medicines
+      </a>
+    </li>
+
+    <li>
+      <a class="dropdown-item" href="higine/higin.html">
+        Hygiene Products
+      </a>
+    </li>
+
+    <li>
+      <a class="dropdown-item" href="healthdevise.html">
+        Health Devices
+      </a>
+    </li>
+
+    <li>
+      <a class="dropdown-item" href="vitamins.html">
+        Vitamins & Supplements
+      </a>
+    </li>
+
+    <li>
+      <a class="dropdown-item" href="baby-care.html">
+        Baby Care
+      </a>
+    </li>
+
+    <li>
+      <a class="dropdown-item" href="personal-care.html">
+        Personal Care
+      </a>
+    </li>
+
+    <li>
+      <a class="dropdown-item" href="health-wellness.html">
+        Health & Wellness
+      </a>
+    </li>
+
+    <li>
+      <hr class="dropdown-divider">
+    </li>
+
+    <li>
+      <a class="dropdown-item" href="first-aid.html">
+        First Aid
+      </a>
+    </li>
+
+  </ul>
+</li>
+          
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-center">
+      <p class="hero-kicker">Al-Shifa Pharmacy &amp; Child Care Clinic</p>
+      <h1>Book<br>Appointment</h1>
+      <p class="hero-sub">Caring for families with trusted medicines and gentle child care.</p>
+      <a href="#appointment" class="btn btn-book">Book Now</a>
+    </div>
+  </section>
+
+
+  <section class="py-5" id="appointment">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <h2 class="section-title text-center mb-4">Book an Appointment</h2>
+          <form class="appt-form" onsubmit="event.preventDefault(); alert('Thank you. Our team will contact you soon.');">
+            <div class="mb-3">
+              <label class="form-label" for="name">Full name</label>
+              <input class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="phone">Phone</label>
+              <input class="form-control" id="phone" name="phone" type="tel" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="service">Service</label>
+              <select class="form-select" id="service" name="service">
+                <option>Child Care Clinic</option>
+                <option>Pharmacy Consultation</option>
+                <option>General Checkup</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="date">Preferred date</label>
+              <input class="form-control" id="date" name="date" type="date" required>
+            </div>
+            <button type="submit" class="btn btn-book w-100">Request Appointment</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- 
+
+
+
+  <footer class="site-footer" id="contact">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <h3>Al-Shifa</h3>
+          <p>Pharmacy &amp; Child Care Clinic</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Contact</h4>
+          <p>Phone: 000-000-0000</p>
+          <p>Email: info@alshifa.example</p>
+        </div>
+        <div class="col-md-4">
+          <h4>Hours</h4>
+          <p>Mon–Sat: 9:00 AM – 8:00 PM</p>
+          <p>Sunday: Closed</p>
+        </div>
+      </div>
+    </div>
+  </footer> -->
+
+  <!-- footer
+  -->
+<footer style="background-color: #007A4D; color: white; padding: 40px 0; margin-top: 50px;">
+  <div class="container">
+    <div class="row" >
+
+      <!-- About -->
+      <div class="col-md-4">
+        <h3>Al Shifa Pharmacy</h3>
+        <p>
+          Your trusted healthcare partner, providing quality medicines
+          and healthcare products for you and your family.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4">
+        <h4>Quick Links</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="index.html" style="color: white;">Home</a></li>
+          <li><a href="about.html" style="color: white;">About Us</a></li>
+          <li><a href="pharmacy.html" style="color: white;">Pharmacy</a></li>
+          <li><a href="contact.html" style="color: white;">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-4">
+        <h4>Contact Us</h4>
+        <p>📍 Karachi, Pakistan</p>
     
 
+          <h6> 📞+92-333-26-42404</h6>
+    <h6 >✉️ alshifapharmacy@gmail.com</h6>
+      </div>
 
-<marquee>
-    <h6>
-        Book Your Appointment Today &nbsp;&nbsp;&nbsp;
-        Quality Healthcare • Experienced Doctors • Patient Care &nbsp;&nbsp;&nbsp;
-        Book Appointment | Contact Us
-    </h6>
-</marquee>
+    </div>
 
+    <hr>
 
-  
+    <div class="text-center">
+      <p style="margin: 0;">
+        © 2026 Al Shifa Pharmacy. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>
 
-</div>
-
-  <body>
-   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
 </html>
