@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    
+<!-- ================= NAVBAR START ================= -->
+
+<nav class="navbar fixed-top" style="background-color: transparent;">
+
+    <div class="container-fluid">
+
+        <!-- LOGO + NAME -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+
+            <img src="logo.png"
+                 alt="Al-Shifa Logo"
+                 width="60"
+                 height="50"
+                 class="rounded-circle"
+                 style="object-fit: cover;">
+
+            <span>
+                <strong style="color:#006A42;">Al-Shifa</strong>
+
+                <small class="d-block" style="color:#012559;">
+                    Pharmacy & Child Care Clinic
+                </small>
+            </span>
+
+        </a>
+
+
+        <!-- TOGGLE BUTTON -->
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar"
+                aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- OFFCANVAS -->
+        <div class="offcanvas offcanvas-end"
+             tabindex="-1"
+             id="offcanvasNavbar"
+             aria-labelledby="offcanvasNavbarLabel">
+
+
+            <!-- OFFCANVAS HEADER -->
+            <div class="offcanvas-header">
+
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+
+                    <a class="navbar-brand d-flex align-items-center gap-2"
+                       href="index.html">
+
+                        <img src="logo.png"
+                             alt="Al-Shifa Logo"
+                             width="60"
+                             height="50"
+                             class="rounded-circle"
+                             style="object-fit: cover;">
+
+                        <span>
+                            <strong style="color:#006A42;">
+                                Al-Shifa
+                            </strong>
+
+                            <small class="d-block"
+                                   style="color:#012559;">
+                                Pharmacy & Child Care Clinic
+                            </small>
+                        </span>
+
+                    </a>
+
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="offcanvas"
+                        aria-label="Close">
+                </button>
+
+            </div>
+
+
+            <!-- OFFCANVAS BODY -->
+            <div class="offcanvas-body">
+
+                <!-- MENU -->
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           href="index.html"
+                           style="color:#006A42;">
+                            Home
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="about.html"
+                           style="color:#006A42;">
+                            About Us
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="PHARMACY.html"
+                           style="color:#006A42;">
+                            Pharmacy
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           href="contact.html"
+                           style="color:#006A42;">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+
+                <!-- SEARCH -->
+                <form class="d-flex mt-3" role="search">
+
+                    <input class="form-control me-2"
+                           type="search"
+                           placeholder="Search"
+                           aria-label="Search">
+
+                    <button class="btn btn-outline-success"
+                            type="submit">
+                        Search
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+
+<!-- ================= NAVBAR END ================= -->
+
+<!-- Page Heading -->
+<section class="py-5" style="padding-top: 120px !important;">
+
+    <div class="container text-center">
+
+        <!-- Small Badge -->
+        <span class="badge rounded-pill px-4 py-2 mb-3"
+              style="background-color: #006A42; font-size: 15px;">
+            Our Products
+        </span>
+
+        <!-- Main Heading -->
+        <h1 class="fw-bold display-5 mb-3"
+            style="color: #012559;">
+            Hand Hygiene
+        </h1>
+
+        <!-- Line -->
+        <div class="mx-auto mb-3"
+             style="width: 70px; height: 4px;
+                    background-color: #006A42;
+                    border-radius: 10px;">
+        </div>
+
+        <!-- Description -->
+        <p class="text-muted mx-auto"
+           style="max-width: 650px;">
+            Quality hand hygiene products selected to help keep
+            your hands clean, fresh, protected, and healthy
+            throughout the day.
+        </p>
+
+    </div>
+
+</section>
+<!-- Hand Hygiene Products -->
+<section class="container py-5">
+    <div class="row g-4">
+
+        <!-- Card 1 -->
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+                <img src="antibacterial-soap.jpg"
+                     class="card-img-top"
+                     alt="Antibacterial Soap"
+                     style="height:220px; object-fit:contain;">
+
+                <div class="card-body">
+                    <h5 class="fw-bold" style="color:#012559;">
+                        Antibacterial Soap
+                    </h5>
+                    <p class="text-muted">
+                        Helps keep hands clean and fresh for everyday hygiene.
+                    </p>
+                    <span class="badge bg-success">
+                        Hand Care
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+                <img src="hand-wash.jpg"
+                     class="card-img-top"
+                     alt="Hand Wash"
+                     style="height:220px; object-fit:contain;">
+
+                <div class="card-body">
+                    <h5 class="fw-bold" style="color:#012559;">
+                        Hand Wash
+                    </h5>
+                    <p class="text-muted">
+                        Gentle hand wash for regular cleaning and freshness.
+                    </p>
+                    <span class="badge bg-success">
+                        Daily Hygiene
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+                <img src="hand-sanitizer.jpg"
+                     class="card-img-top"
+                     alt="Hand Sanitizer"
+                     style="height:220px; object-fit:contain;">
+
+                <div class="card-body">
+                    <h5 class="fw-bold" style="color:#012559;">
+                        Hand Sanitizer
+                    </h5>
+                    <p class="text-muted">
+                        Convenient hand hygiene solution for use on the go.
+                    </p>
+                    <span class="badge bg-success">
+                        Protection
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+                <img src="liquid-hand-soap.jpg"
+                     class="card-img-top"
+                     alt="Liquid Hand Soap"
+                     style="height:220px; object-fit:contain;">
+
+                <div class="card-body">
+                    <h5 class="fw-bold" style="color:#012559;">
+                        Liquid Hand Soap
+                    </h5>
+                    <p class="text-muted">
+                        Easy-to-use liquid soap for daily hand washing.
+                    </p>
+                    <span class="badge bg-success">
+                        Hand Care
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+                <img src="hand-wipes.jpg"
+                     class="card-img-top"
+                     alt="Hand Wipes"
+                     style="height:220px; object-fit:contain;">
+
+                <div class="card-body">
+                    <h5 class="fw-bold" style="color:#012559;">
+                        Hand Wipes
+                    </h5>
+                    <p class="text-muted">
+                        Convenient wipes for quick hand cleaning while travelling.
+                    </p>
+                    <span class="badge bg-success">
+                        Hygiene Care
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="col-lg-4 col-md-6 col-12">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+                <img src="hand-cream.jpg"
+                     class="card-img-top"
+                     alt="Hand Cream"
+                     style="height:220px; object-fit:contain;">
+
+                <div class="card-body">
+                    <h5 class="fw-bold" style="color:#012559;">
+                        Hand Cream
+                    </h5>
+                    <p class="text-muted">
+                        Helps keep hands soft, smooth, and moisturized.
+                    </p>
+                    <span class="badge bg-success">
+                        Skin Care
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

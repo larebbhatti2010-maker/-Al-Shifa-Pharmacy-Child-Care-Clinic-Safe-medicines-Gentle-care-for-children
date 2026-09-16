@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Al-Shifa Pharmacy & Child Care Clinic</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+    <style>
+
+        /* Navbar */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Logo */
+        .logo-img {
+            width: 60px;
+            height: 50px;
+            object-fit: cover;
+        }
+
+        /* Brand */
+        .brand-name {
+            color: #006A42;
+        }
+
+        .brand-subtitle {
+            color: #012559;
+            font-size: 12px;
+        }
+
+        /* Search */
+        .search-box {
+            width: 400px;
+        }
+
+        /* Navigation links */
+        .nav-link {
+            color: #006A42 !important;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: #012559 !important;
+        }
+
+        /* Dropdown */
+        .dropdown-item:hover {
+            background-color: #e8f5ef;
+            color: #006A42;
+        }
+
+        /* Mobile */
+        @media (max-width: 991px) {
+
+            .search-form {
+                margin-top: 20px;
+                width: 100%;
+            }
+
+            .search-box {
+                width: 100%;
+            }
+
+            .offcanvas {
+                width: 300px;
+            }
+
+            .navbar-brand {
+                max-width: 80%;
+            }
+        }
+
+        /* Small mobile */
+        @media (max-width: 576px) {
+
+            .logo-img {
+                width: 50px;
+                height: 45px;
+            }
+
+            .brand-name {
+                font-size: 18px;
+            }
+
+            .brand-subtitle {
+                font-size: 10px;
+            }
+
+            .offcanvas {
+                width: 280px;
+            }
+
+        }
+        .pain-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding: 10px 5px 20px;
+    
+    /* Hide scrollbar */
+    scrollbar-width: none;
+}
+
+.pain-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.pain-category {
+    min-width: 150px;
+    height: 140px;
+    flex-shrink: 0;
+
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px 10px;
+
+    text-align: center;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.pain-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,106,66,0.20);
+}
+
+.pain-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e8f6f0;
+    color: #006A42;
+
+    font-size: 25px;
+}
+
+.pain-category h6 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+    </style>
+
+</head>
+
+<body>
+
+
+<!-- ================= NAVBAR START ================= -->
+
+<nav class="navbar navbar-expand-lg">
+
+    <div class="container-fluid px-3 px-lg-5">
+
+        <!-- Logo + Brand -->
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+
+            <img src="logo.png"
+                class="rounded-circle logo-img"
+                alt="Al-Shifa Logo">
+
+            <span>
+                <strong class="brand-name">Al-Shifa</strong>
+
+                <small class="d-block brand-subtitle">
+                    Pharmacy & Child Care Clinic
+                </small>
+            </span>
+
+        </a>
+
+
+        <!-- Search Bar -->
+        <form class="d-flex search-form mx-lg-auto"
+              role="search">
+
+            <input
+                class="form-control search-box me-2"
+                type="search"
+                placeholder="Search medicines, products..."
+                aria-label="Search">
+
+            <button
+                class="btn btn-outline-success"
+                type="submit">
+                Search
+            </button>
+
+        </form>
+
+
+        <!-- Mobile Menu Button -->
+        <button
+            class="navbar-toggler ms-2"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+
+        <!-- ================= OFFCANVAS ================= -->
+
+        <div
+            class="offcanvas offcanvas-end"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel">
+
+
+            <!-- Offcanvas Header -->
+
+            <div class="offcanvas-header">
+
+                <h5
+                    class="offcanvas-title"
+                    id="offcanvasNavbarLabel">
+
+                    <a
+                        class="navbar-brand d-flex align-items-center gap-2"
+                        href="index.html">
+
+                        <img
+                            src="logo.png"
+                            class="rounded-circle logo-img"
+                            alt="Al-Shifa Logo">
+
+                        <span>
+                            <strong class="brand-name">
+                                Al-Shifa
+                            </strong>
+
+                            <small class="d-block brand-subtitle">
+                                Pharmacy & Child Care Clinic
+                            </small>
+                        </span>
+
+                    </a>
+
+                </h5>
+
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close">
+                </button>
+
+            </div>
+
+
+            <!-- Offcanvas Body -->
+
+            <div class="offcanvas-body">
+
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+
+                    <!-- Home -->
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link active"
+                            href="index.html">
+                            Home
+                        </a>
+                    </li>
+
+
+                    <!-- About -->
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="about.html">
+                            About Us
+                        </a>
+                    </li>
+
+
+                    <!-- Pharmacy -->
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="PHARMACY.html">
+                            Pharmacy
+                        </a>
+                    </li>
+
+
+                    <!-- Contact -->
+
+                    <li class="nav-item">
+                        <a
+                            class="nav-link"
+                            href="contact.html">
+                            Contact
+                        </a>
+                    </li>
+
+
+                    <!-- Categories -->
+
+                    <li class="nav-item dropdown">
+
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+
+                            Categories
+
+                        </a>
+
+
+                        <ul class="dropdown-menu">
+
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="higine/higin.html">
+
+                                    Hygiene Products
+
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="healthdevise.html">
+
+                                    Health Device Products
+
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="#">
+
+                                    Baby Care
+
+                                </a>
+                            </li>
+
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+        <!-- ================= OFFCANVAS END ================= -->
+
+    </div>
+
+</nav>
+
+<!-- ================= NAVBAR END ================= -->
+<!-- bannar start -->
+<div class="card text-bg-dark" style="border: none;">
+
+    <img src="painbannafr.png"
+         class="card-img"
+         alt="Pain Relief Medicines"
+         style="width: 100%; height: 80vh; object-fit: cover;">
+
+    <div class="card-img-overlay d-flex align-items-center">
+
+        <div class="ms-5">
+
+            <h1 class="card-title fw-bold display-4" style="color: #012559;">
+                Pain Relief Medicines
+            </h1>
+
+            <p class="card-text fs-5" style="max-width: 550px; color:#007A4D;">
+                Find trusted medicines and products to help relieve
+                headaches, muscle pain, joint pain, back pain, and
+                everyday aches.
+            </p>
+
+            <button class="btn text-white px-4 py-2"
+                    style="background-color:#006A42;">
+                Shop Pain Relief
+            </button>
+
+        </div>
+
+    </div>
+</div>
+ <!-- bannar end -->
+<!-- scrool bar start -->'
+ <!-- Pain Relief Categories -->
+<section class="py-4">
+    <div class="container">
+
+        <h3 class="fw-bold mb-4">Pain Relief Categories</h3>
+
+        <div class="pain-scroll">
+
+            <!-- Category 1 -->
+            <div class="pain-category">
+                <div class="pain-icon">
+                    <i class="bi bi-capsule"></i>
+                </div>
+                <h6>Painkillers</h6>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="pain-category">
+                <div class="pain-icon">
+                    <i class="bi bi-person"></i>
+                </div>
+                <h6>Headache Relief</h6>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="pain-category">
+                <div class="pain-icon">
+                    <i class="bi bi-bandaid"></i>
+                </div>
+                <h6>Muscle Pain</h6>
+            </div>
+
+            <!-- Category 4 -->
+            <div class="pain-category">
+                <div class="pain-icon">
+                    <i class="bi bi-heart-pulse"></i>
+                </div>
+                <h6>Joint Pain</h6>
+            </div>
+
+            <!-- Category 5 -->
+            <div class="pain-category">
+                <div class="pain-icon">
+                    <i class="bi bi-activity"></i>
+                </div>
+                <h6>Back Pain</h6>
+            </div>
+
+            <!-- Category 6 -->
+            <div class="pain-category">
+                <div class="pain-icon">
+                    <i class="bi bi-droplet"></i>
+                </div>
+                <h6>Muscle Relief Gels</h6>
+            </div>
+
+            <!-- Category 7 -->
+            <div class="pain-category">
+                <div class="pain-icon">
+                    <i class="bi bi-thermometer-half"></i>
+                </div>
+                <h6>Fever Relief</h6>
+            </div>
+
+        </div>
+
+    </div>
+</section>'
+ <!-- scroll bar end  -->
+<!-- Bootstrap JS -->
+<div class="container">
+  popular Categories
+</div>
+<!-- Popular Medicines -->
+<div class="container py-5">
+
+    <h2 class="text-center fw-bold mb-4" style="color:#006A42;">
+        Popular Medicines
+    </h2>
+
+    <div class="row g-4">
+
+        <!-- Card 1 -->
+        <div class="col-lg col-md-6 col-12">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+
+                <img src="images/panadol.png"
+                     class="card-img-top mx-auto"
+                     style="width:150px; height:150px; object-fit:contain;">
+
+                <div class="card-body">
+                    <h5 class="fw-bold">Panadol</h5>
+                    <p class="text-muted mb-2">Pain & Fever Relief</p>
+                    <p class="fw-bold">500mg</p>
+
+                    <h6 class="fw-bold mb-3">Rs. 150</h6>
+
+                    <button class="btn text-white"
+                            style="background:#006A42;">
+                        <i class="bi bi-cart-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg col-md-6 col-12">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+
+                <img src="images/brufen.png"
+                     class="card-img-top mx-auto"
+                     style="width:150px; height:150px; object-fit:contain;">
+
+                <div class="card-body">
+                    <h5 class="fw-bold">Brufen</h5>
+                    <p class="text-muted mb-2">Pain Relief</p>
+                    <p class="fw-bold">400mg</p>
+
+                    <h6 class="fw-bold mb-3">Rs. 200</h6>
+
+                    <button class="btn text-white"
+                            style="background:#006A42;">
+                        <i class="bi bi-cart-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg col-md-6 col-12">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+
+                <img src="images/cetirizine.png"
+                     class="card-img-top mx-auto"
+                     style="width:150px; height:150px; object-fit:contain;">
+
+                <div class="card-body">
+                    <h5 class="fw-bold">Cetirizine</h5>
+                    <p class="text-muted mb-2">Allergy Relief</p>
+                    <p class="fw-bold">10mg</p>
+
+                    <h6 class="fw-bold mb-3">Rs. 120</h6>
+
+                    <button class="btn text-white"
+                            style="background:#006A42;">
+                        <i class="bi bi-cart-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-lg col-md-6 col-12">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+
+                <img src="images/flagyl.png"
+                     class="card-img-top mx-auto"
+                     style="width:150px; height:150px; object-fit:contain;">
+
+                <div class="card-body">
+                    <h5 class="fw-bold">Flagyl</h5>
+                    <p class="text-muted mb-2">Digestive Health</p>
+                    <p class="fw-bold">400mg</p>
+
+                    <h6 class="fw-bold mb-3">Rs. 180</h6>
+
+                    <button class="btn text-white"
+                            style="background:#006A42;">
+                        <i class="bi bi-cart-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-lg col-md-6 col-12">
+            <div class="card h-100 border-0 shadow-sm text-center p-3">
+
+                <img src="images/disprin.png"
+                     class="card-img-top mx-auto"
+                     style="width:150px; height:150px; object-fit:contain;">
+
+                <div class="card-body">
+                    <h5 class="fw-bold">Disprin</h5>
+                    <p class="text-muted mb-2">Pain & Fever Relief</p>
+                    <p class="fw-bold">300mg</p>
+
+                    <h6 class="fw-bold mb-3">Rs. 100</h6>
+
+                    <button class="btn text-white"
+                            style="background:#006A42;">
+                        <i class="bi bi-cart-plus"></i>
+                        Add to Cart
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<!-- footer
+  -->
+<footer style="background-color: #007A4D; color: white; padding: 40px 0; margin-top: 50px;">
+  <div class="container">
+    <div class="row" >
+
+      <!-- About -->
+      <div class="col-md-4">
+        <h3>Al Shifa Pharmacy</h3>
+        <p>
+          Your trusted healthcare partner, providing quality medicines
+          and healthcare products for you and your family.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-md-4">
+        <h4>Quick Links</h4>
+        <ul style="list-style: none; padding: 0;">
+          <li><a href="index.html" style="color: white;">Home</a></li>
+          <li><a href="about.html" style="color: white;">About Us</a></li>
+          <li><a href="pharmacy.html" style="color: white;">Pharmacy</a></li>
+          <li><a href="contact.html" style="color: white;">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-md-4">
+        <h4>Contact Us</h4>
+        <p>📍 Karachi, Pakistan</p>
+        <p>📞 +92 300 1234567</p>
+        <p>✉️ info@alshifapharmacy.com</p>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <div class="text-center">
+      <p style="margin: 0;">
+        © 2026 Al Shifa Pharmacy. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</footer>
+  <!-- footer -->
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous">
+</script>
+
+</body>
+
+</html>
